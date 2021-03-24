@@ -1,0 +1,16 @@
+
+
+<table class="table">
+  <colgroup *ngFor="let column of columns" [ngStyle]="column.style"></colgroup>
+  <thead>
+    <th *ngFor="let column of columns">
+      {{ column.label }}
+    </th>
+  </thead>
+  <tbody>
+    <tr *ngFor="let entity of entities">
+      <td *ngFor="let key of keys">{{ entity[key] }}</td>
+      <button class="btn btn-warning">Adicionar ao carrinho</button>
+    </tr>
+  </tbody>
+</table>
