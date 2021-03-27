@@ -23,10 +23,10 @@
         <td *ngIf="i == 4">
           <img src="https://www.ferraritampabay.com/template/images/models/sf90_stradale.png"/>
         </td>
-        <td *ngFor="let key of keys">
+        <td *ngFor="let key of keys"id="itens">
           {{ entity[key] }}
         </td>
-        <button class="btn btn-primary">Adicionar ao carrinho</button>
+        <button class="btn btn-primary" (click)="adicionarCompra(i)">Adicionar ao carrinho</button>
       </tr>
     </tbody>
   </table>
@@ -34,7 +34,6 @@
 
 
 <div *ngIf="entityName!='carros'">
-
 <table class="table table-dark">
   <thead>
     <th *ngFor="let column of columns">
@@ -50,9 +49,4 @@
     </tr>
   </tbody>
 </table>
-
-
-
-
-
 </div>

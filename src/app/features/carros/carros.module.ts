@@ -10,6 +10,6 @@ import { SharedModule } from 'src/app/shared/shared.module';
   declarations: [ListComponentCarros, ViewComponentCarros],
   imports: [
     CommonModule, SharedModule],
-  exports: [ViewComponentCarros]
+  exports: [ViewComponentCarros, ListComponentCarros]
 })
 export class CarrosModule { }
