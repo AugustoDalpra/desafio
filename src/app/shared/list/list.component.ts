@@ -11,7 +11,7 @@ export class ListComponent implements OnInit {
 @Input() entityName: string;
 @Input() entities: any[];
 @Input() columns: { label: string; style: any }[];
-
+@Input() imagens: string;
 idDiv: string;
 keys = []
 

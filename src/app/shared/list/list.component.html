@@ -1,16 +1,58 @@
 
+ <div *ngIf="entityName=='carros'">
+  <table class="table table-dark">
+    <thead>
+      <th *ngFor="let column of columns">
+        {{ column.label }}
+      </th>
+    </thead>
+    <tbody>
+      <tr *ngFor="let entity of entities; let i = index">
+        <td *ngIf="i == 0">
+          <img src="https://www.freepngimg.com/thumb/maserati/91646-car-maserati-luxury-vehicle-download-hd-png-thumb.png"/>
+        </td>
+        <td *ngIf="i == 1">
+          <img src="https://crdms.images.consumerreports.org/c_lfill,w_225,q_auto,f_auto/prod/cars/cr/model-years/10634-2020-bentley-flying-spur"/>
+        </td>
+        <td *ngIf="i == 2">
+          <img src="https://www.pngpix.com/wp-content/uploads/2016/06/PNGPIX-COM-Gray-Aston-Martin-V12-Vantage-Car-PNG-Image-250x137.png"/>
+        </td>
+        <td *ngIf="i == 3">
+          <img src="https://res.cloudinary.com/carsguide/image/upload/f_auto,fl_lossy,q_auto,t_cg_vehicle_icon_lg/v1/editorial/vhs/Mercedes-Benz-S-Class_0.png"/>
+        </td>
+        <td *ngIf="i == 4">
+          <img src="https://www.ferraritampabay.com/template/images/models/sf90_stradale.png"/>
+        </td>
+        <td *ngFor="let key of keys">
+          {{ entity[key] }}
+        </td>
+        <button class="btn btn-primary">Adicionar ao carrinho</button>
+      </tr>
+    </tbody>
+  </table>
+</div>
 
-<table class="table">
-  <colgroup *ngFor="let column of columns" [ngStyle]="column.style"></colgroup>
+
+<div *ngIf="entityName!='carros'">
+
+<table class="table table-dark">
   <thead>
     <th *ngFor="let column of columns">
       {{ column.label }}
     </th>
   </thead>
   <tbody>
-    <tr *ngFor="let entity of entities">
-      <td *ngFor="let key of keys">{{ entity[key] }}</td>
-      <button class="btn btn-warning">Adicionar ao carrinho</button>
+    <tr *ngFor="let entity of entities; let i = index">
+      <td *ngFor="let key of keys">
+        {{ entity[key] }}
+      </td>
+      <button class="btn btn-primary">Adicionar ao carrinho</button>
     </tr>
   </tbody>
 </table>
+
+
+
+
+
+</div>
