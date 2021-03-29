@@ -1,4 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+
+import { Component, Input, OnInit } from '@angular/core';
+import { Location } from '@angular/common';
 
 @Component({
   selector: 'app-payment',
@@ -7,9 +9,40 @@ import { Component, OnInit } from '@angular/core';
 })
 export class PaymentComponent implements OnInit {
 
-  constructor() { }
+constructor( private location: Location) { }
 
-  ngOnInit(): void {
-  }
+ngOnInit(): void {
+
+}
+
+efetuarCompra(){
+
+
+  alert('Compra enviada!! Vá até a agência do banco mais próximo para confirmar a compra com o gerente');
+
+  this.refresh();
+
+}
+
+
+
+refresh(){
+
+  location.reload();
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 }
