@@ -6,9 +6,9 @@ import { SharedModule } from 'src/app/shared/shared.module';
 
 
 @NgModule({
-  declarations: [ ViewComponentCarros],
+  declarations: [ ViewComponentCarros, ],
   imports: [
     CommonModule, SharedModule],
-  exports: [ViewComponentCarros]
+  exports: [ViewComponentCarros, ]
 })
 export class CarrosModule { }
