@@ -1,6 +1,5 @@
 
-import { Component, Input, OnInit } from '@angular/core';
-
+import { Component, Input, OnInit, Output } from '@angular/core';
 
 @Component({
   selector: 'app-list',
@@ -8,31 +7,37 @@ import { Component, Input, OnInit } from '@angular/core';
   styleUrls: ['./list.component.scss']
 })
 export class ListComponent implements OnInit {
-
+@Input() carros: [];
 @Input() entityName: string;
 @Input() entities: any[];
 @Input() columns: { label: string; style: any }[];
 @Input() imagens: string;
 idDiv: string;
 keys = []
-@Input() compra : any;
+ idCompra: any;
 
-  constructor() { }
+carroEscolhido= [];
 
-  ngOnInit(): void {
+ constructor() { }
+
+ ngOnInit(): void {
     this.keys = Object.keys(this.entities[0]);
     this.idDiv = `entity-${this.entityName}`;
   }
 
 
+
   adicionarCompra(index){
 
-    this.compra = document.getElementById('itens');
+    this.carroEscolhido.splice(0);
+
+    alert("Carro adicionado com sucesso");
+
+this.idCompra = index;
+
+this.carroEscolhido.push(this.carros[this.idCompra])
 
   }
-
-
-
 
 
 }

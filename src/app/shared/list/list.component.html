@@ -6,7 +6,7 @@
         {{ column.label }}
       </th>
     </thead>
-    <tbody>
+    <tbody >
       <tr *ngFor="let entity of entities; let i = index">
         <td *ngIf="i == 0">
           <img src="https://www.freepngimg.com/thumb/maserati/91646-car-maserati-luxury-vehicle-download-hd-png-thumb.png"/>
@@ -23,7 +23,7 @@
         <td *ngIf="i == 4">
           <img src="https://www.ferraritampabay.com/template/images/models/sf90_stradale.png"/>
         </td>
-        <td *ngFor="let key of keys"id="itens">
+        <td *ngFor="let key of keys" id="itens">
           {{ entity[key] }}
         </td>
         <button class="btn btn-primary" (click)="adicionarCompra(i)">Adicionar ao carrinho</button>
@@ -31,6 +31,7 @@
     </tbody>
   </table>
 </div>
+
 
 
 <div *ngIf="entityName!='carros'">
